@@ -22,6 +22,7 @@ describe('utils', function() {
     });
   
     it('should fail trying to create a document from a non supported spec version', function() {
+      console.log("HELLO!");
       const doc = { asyncapi: '99.99.99' };
       const detailed = createDetailedAsyncAPI(doc, doc as any);
       expect(() => createAsyncAPIDocument(detailed)).toThrow('Unsupported AsyncAPI version: 99.99.99');
