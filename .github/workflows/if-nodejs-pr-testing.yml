@@ -37,7 +37,7 @@ jobs:
         name: Check package-lock.json lockfileVersion 
         id: packagelockjson
         run: |
-          grep '"lockfileVersion": 1' package-lock.json && echo "::set-output name=lockfileVersion::1"
+          grep '"lockfileVersion": 2' package-lock.json && echo "::set-output name=lockfileVersion::2" || echo "::set-output name=lockfileVersion::1"
       - if: steps.packagelockjson.outputs.lockfileVersion == 1
         name: Setup Node.js
         uses: actions/setup-node@v2
