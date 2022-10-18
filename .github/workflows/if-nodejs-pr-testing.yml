@@ -36,6 +36,7 @@ jobs:
       - if: steps.packagejson.outputs.exists == 'true'
         name: Check package-lock.json lockfileVersion 
         id: packagelockjson
+        shell: bash
         run: |
           grep '"lockfileVersion": 2' package-lock.json && echo "::set-output name=lockfileVersion::2" || echo "::set-output name=lockfileVersion::1"
       - if: steps.packagelockjson.outputs.lockfileVersion == 1
