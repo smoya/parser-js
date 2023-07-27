@@ -1,6 +1,6 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 
-import { aas2All as aas2AllFormats } from '../formats';
+import { allAsyncAPIFormats as allAsyncAPIFormatsFormats } from '../formats';
 import { truthy, pattern } from '@stoplight/spectral-functions';
 
 import { channelParameters } from './functions/channelParameters';
@@ -20,7 +20,7 @@ import type { Parser } from '../../parser';
 
 export const v2CoreRuleset = {
   description: 'Core AsyncAPI 2.x.x ruleset.',
-  formats: [...aas2AllFormats],
+  formats: [...allAsyncAPIFormatsFormats],
   rules: {
     /**
      * Server Object rules
@@ -191,7 +191,7 @@ export const v2CoreRuleset = {
 export const v2SchemasRuleset = (parser: Parser) => {
   return {
     description: 'Schemas AsyncAPI 2.x.x ruleset.',
-    formats: [...aas2AllFormats],
+    formats: [...allAsyncAPIFormatsFormats],
     rules: {
       'asyncapi2-schemas': asyncApi2SchemaParserRule(parser),
       'asyncapi2-schema-default': {
@@ -244,7 +244,7 @@ export const v2SchemasRuleset = (parser: Parser) => {
 
 export const v2RecommendedRuleset = {
   description: 'Recommended AsyncAPI 2.x.x ruleset.',
-  formats: [...aas2AllFormats],
+  formats: [...allAsyncAPIFormatsFormats],
   rules: {
     /**
      * Root Object rules
@@ -334,7 +334,7 @@ export const v2RecommendedRuleset = {
     'asyncapi2-message-messageId': {
       description: 'Message should have a "messageId" field defined.',
       recommended: true,
-      formats: aas2AllFormats.slice(4), // from 2.4.0
+      formats: allAsyncAPIFormatsFormats.slice(4), // from 2.4.0
       given: [
         '$.channels.*.[publish,subscribe][?(@property === "message" && @.oneOf == void 0)]',
         '$.channels.*.[publish,subscribe].message.oneOf.*',

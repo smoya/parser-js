@@ -1,8 +1,9 @@
 import { Document } from '@stoplight/spectral-core';
 
-import { AsyncAPIDocumentV2 } from '../src/models';
+import { AsyncAPIDocumentV2, AsyncAPIDocumentV3 } from '../src/models';
 import { Parser } from '../src/parser';
 import { xParserApiVersion } from '../src/constants';
+
 
 describe('parse()', function() {
   const parser = new Parser();

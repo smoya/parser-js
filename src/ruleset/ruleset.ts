@@ -1,4 +1,4 @@
-import { aas2All as aas2AllFormats } from './formats';
+import { allAsyncAPIFormats as allAsyncAPIFormatsFormats } from './formats';
 import { lastVersion } from '../constants';
 import { truthy, schema } from '@stoplight/spectral-functions';
 
@@ -9,7 +9,7 @@ import { unusedComponent } from './functions/unusedComponent';
 
 export const coreRuleset = {
   description: 'Core AsyncAPI x.x.x ruleset.',
-  formats: [...aas2AllFormats],
+  formats: [...allAsyncAPIFormatsFormats],
   rules: {
     /**
      * Root Object rules
@@ -80,7 +80,7 @@ export const coreRuleset = {
 
 export const recommendedRuleset = {
   description: 'Recommended AsyncAPI x.x.x ruleset.',
-  formats: [...aas2AllFormats],
+  formats: [...allAsyncAPIFormatsFormats],
   rules: {
     /**
      * Root Object rules
