@@ -1,0 +1,20 @@
+{
+    "$schema": "https://typedoc.org/schema.json",
+    // "entryPoints": ["./src/models/asyncapi.ts"],
+    "entryPoints": ["./src/models"],
+    "plugin": [
+        "typedoc-plugin-missing-exports",
+        "typedoc-plugin-markdown",
+    ],
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "excludeInternal": true,
+    "excludeNotDocumented": true,
+    "out": "api-docs",
+    "readme": "api-docs/README.md",
+    "exclude": [
+        "src/models/*/*.ts",
+        "src/models/base.ts",
+        "src/models/iterator.ts",
+    ]
+}

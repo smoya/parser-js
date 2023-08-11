@@ -1,6 +1,9 @@
 import type { BaseModel } from './base';
 import type { ExtensionsMixinInterface } from './mixins';
 
+/**
+ * Represents a Message Example Object.
+ */
 export interface MessageExampleInterface extends BaseModel, ExtensionsMixinInterface {
   hasName(): boolean;
   name(): string | undefined;

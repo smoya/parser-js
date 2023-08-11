@@ -5,6 +5,9 @@ import type { MessagesInterface } from './messages';
 
 import type { OperationReplyAddressInterface } from './operation-reply-address';
 
+/**
+ * Represents an Operation Reply Object.
+ */
 export interface OperationReplyInterface extends BaseModel, ExtensionsMixinInterface {
   id(): string | undefined;
   hasAddress(): boolean;

@@ -6,6 +6,9 @@ import type { OperationsInterface } from './operations';
 import type { SchemaInterface } from './schema';
 import type { ServersInterface } from './servers';
 
+/**
+ * Represents a Message Object.
+ */
 export interface MessageInterface extends BaseModel, MessageTraitInterface {
   hasPayload(): boolean;
   payload(): SchemaInterface | undefined;

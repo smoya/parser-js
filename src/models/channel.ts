@@ -5,6 +5,9 @@ import type { BindingsMixinInterface, DescriptionMixinInterface, ExtensionsMixin
 import type { OperationsInterface } from './operations';
 import type { ServersInterface } from './servers';
 
+/**
+ * Represents a Channel Object.
+ */
 export interface ChannelInterface extends BaseModel, BindingsMixinInterface, DescriptionMixinInterface, ExtensionsMixinInterface {
   id(): string;
   address(): string | null | undefined;

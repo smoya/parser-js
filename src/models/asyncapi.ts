@@ -11,6 +11,9 @@ import type { ServersInterface } from './servers';
 
 import type { v2, v3 } from '../spec-types';
 
+/**
+ * Represents an AsyncAPI document object.
+ */
 export interface AsyncAPIDocumentInterface extends BaseModel<v2.AsyncAPIObject | v3.AsyncAPIObject>, ExtensionsMixinInterface {
   version(): string;
   defaultContentType(): string | undefined;

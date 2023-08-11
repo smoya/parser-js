@@ -4,6 +4,9 @@ import type { MessageExamplesInterface } from './message-examples';
 import type { BindingsMixinInterface, DescriptionMixinInterface, ExtensionsMixinInterface, ExternalDocumentationMixinInterface, TagsMixinInterface } from './mixins';
 import type { SchemaInterface } from './schema';
 
+/**
+ * Represents a Message Trait Object.
+ */
 export interface MessageTraitInterface extends BaseModel, BindingsMixinInterface, DescriptionMixinInterface, ExtensionsMixinInterface, ExternalDocumentationMixinInterface, TagsMixinInterface {
   id(): string;
   hasSchemaFormat(): boolean;

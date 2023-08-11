@@ -3,6 +3,9 @@ import type { LicenseInterface } from './license';
 import type { BaseModel } from './base';
 import type { DescriptionMixinInterface, ExtensionsMixinInterface, ExternalDocumentationMixinInterface, TagsMixinInterface } from './mixins';
 
+/**
+ * Represents an Info Object.
+ */
 export interface InfoInterface extends BaseModel, DescriptionMixinInterface, ExtensionsMixinInterface, ExternalDocumentationMixinInterface, TagsMixinInterface {
   title(): string;
   version(): string;
