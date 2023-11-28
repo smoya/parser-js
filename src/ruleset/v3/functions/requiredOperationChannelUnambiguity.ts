@@ -30,7 +30,7 @@ export const requiredOperationChannelUnambiguity = createRulesetFunction<{ chann
     const results: IFunctionResult[] = [];
     const channelPointer = targetVal.channel?.$ref as string; // required
 
-    if (channelPointer.includes('#/components/channels')) {
+    if (!channelPointer.includes('#/channels/')) {
       results.push({
         message: 'The channel field of a required operation should point to a required channel.',
         path: [...ctx.path, 'channel'],
